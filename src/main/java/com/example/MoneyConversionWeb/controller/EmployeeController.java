@@ -15,11 +15,7 @@ import com.example.MoneyConversionWeb.repository.EmployeeRepository;
 @RestController
 @RequestMapping(value = "/employeeWebService")
 public class EmployeeController {
-	
-	
-	/*@Autowired
-	Environment env;*/
-	
+		
 	@Autowired
 	EmployeeRepository empRepo;
 	
