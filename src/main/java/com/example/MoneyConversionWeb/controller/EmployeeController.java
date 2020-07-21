@@ -36,34 +36,6 @@ public class EmployeeController {
 		Optional<Employee> findById = empRepo.findById(empId);
 		Employee employee = findById.get();
 		return employee.getName();
-	}
-	
-	/*@GetMapping(path = "/addEmployeeSecond/{empName}/{empId}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public String addEmployeeSecond(@PathVariable(name="empName") String empName,@PathVariable(name="empId") String empId)
-	{
-		Employee e= new Employee();
-		e.setEmpId(Integer.parseInt(empId));
-		e.setName(empName);
-		System.out.println(e);
-		return "Employee Success";
-	}
-	
-	@GetMapping(path = "/addEmployeeThird", produces = MediaType.APPLICATION_JSON_VALUE,consumes=MediaType.APPLICATION_JSON_VALUE)
-	public String addEmployeeSecond(@RequestBody Employee e)
-	{
-		
-		System.out.println(e);
-		return "Employee Success";
-	}
-	
-	@GetMapping(path = "/testProfiles", produces = MediaType.APPLICATION_JSON_VALUE)
-	public String readAFileFromDirectory()
-	{
-		String rootDir = env.getProperty("folder.name");
-		System.out.println(rootDir);
-		return "READING SUCCESS";
-		
-		
-	}*/
+	}	
 
 }
